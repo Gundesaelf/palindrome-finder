@@ -17,7 +17,7 @@ def load_file():
         with open(fname) as file:
             loaded_txt = file.read().strip().split('\n')
             loaded_txt = [x.lower() for x in loaded_txt]
-            palindromes =set ([x for x in loaded_txt if x == x[::-1]])
+            palindromes = set([x for x in loaded_txt if x == x[::-1]])
             print(palindromes)
             return loaded_txt, palindromes
     except IOError as e:
@@ -27,3 +27,4 @@ def load_file():
 # |---------------------------------MAIN---------------------------------|
 if __name__ == '__main__':
     load_file()
+
